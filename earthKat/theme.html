@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="general" />
+<meta name="author" content="<{$xoops_sitename}>" />
+<meta name="copyright" content="<{$meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table width="100%"  border="0">
+  <tr>
+    <td colspan="5"><table width="100%"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="TOP" align="LEFT" width="60%" background="<{$xoops_imageurl}>/images/Header_BG_Jpg.jpg"><img src="<{$xoops_imageurl}>/images/Header_Left.jpg" width="699" height="266"></td>
+        <td width="39%" valign="TOP" background="<{$xoops_imageurl}>/images/Header_BG_Jpg.jpg">&nbsp;</td>
+        <td width="1%" valign="TOP" background="<{$xoops_imageurl}>/images/Header_BG_Jpg.jpg" align="RIGHT">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+<{if !empty($xoops_lblocks)}>    <td width="15%" align="center" valign="TOP" bgcolor="#baa36e" id="rside"><!-- Start left blocks loop -->
+<{foreach item=block from=$xoops_lblocks}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End left blocks loop --></td>
+<{/if}>
+    <td width="1%">&nbsp;</td>
+    <td width="68%" valign="TOP"><div id="content">
+      <p><{$xoops_contents}></p>
+      <table width="100%"  border="0">
+        <tr>
+          <td valign="TOP"><!-- Start center-center blocks loop -->
+<{foreach item=block from=$xoops_ccblocks}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End center-center blocks loop --></td>
+        </tr>
+        <tr>
+          <td><table width="100%"  border="0">
+            <tr>
+<{if !empty($xoops_contents)}>              <td valign="TOP"><!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End center-left blocks loop --></td><{/if}>
+<{if !empty($xoops_contents)}>              <td valign="TOP"><!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End center-right blocks loop --></td><{/if}>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+<{if !empty($xoops_contents)}>          <td valign="TOP"><!-- Start center-center-top blocks loop -->
+<{foreach item=block from=$xoops_ccblocks_up}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End center-center-top blocks loop --></td><{/if}>
+        </tr>
+        <tr>
+<{if !empty($xoops_contents)}>          <td><!-- Start center-center-bottom blocks loop -->
+<{foreach item=block from=$xoops_ccblocks_down}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End center-center-bottom blocks loop --></td><{/if}>
+        </tr>
+      </table>
+      </div></td>
+    <td width="1%">&nbsp;</td>
+<{if $xoops_showrblock == 1}>    <td width="15%" align="RIGHT" valign="TOP" bgcolor="#baa36e"><!-- Start right blocks loop -->
+<{foreach item=block from=$xoops_rblocks}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/foreach}>
+<!-- End right blocks loop --></td>
+<{/if}>  </tr>
+  <tr align="CENTER" valign="TOP">
+    <td colspan="5"><{$xoops_footer}></td>
+  </tr>
+</table>
+</body>
+</html>
